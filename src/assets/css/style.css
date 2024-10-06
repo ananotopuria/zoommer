@@ -1,22 +1,116 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Header */
+
+/* sup header */
+
+.sup-header {
+  background-color: #ec5e2a;
+  color: #fff;
+  padding: 1rem 0;
+}
+.sup-header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sup-header__contact,
+.sup-header__contact:link,
+.sup-header__contact:visited {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+.sup-header__contact:hover,
+.sup-header__contact:active {
+  transform: scale(1.02);
+}
+.sup-header__phone-number {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sup-header__menu {
+  display: flex;
+  gap: 2rem;
+}
+.sup-header__menu-item {
+  list-style-type: none;
+  transition: transform 0.3s ease;
+}
+.sup-header__link,
+.sup-header__link:link,
+.sup-header__link:visited {
+  text-decoration: none;
+  color: #eaeaea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.sup-header__link:hover,
+.sup-header__link:active {
+  color: #fff;
+}
+.sup-header__menu-item:hover {
+  transform: scale(1.02);
 }
 
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
+/* sub header */
+
+.sub-header {
+  background-color: #edebebbd;
+
+  padding: 1rem 0;
 }
 
-@font-face {
-  font-family: 'Firago';
-  src: url('fonts/Firago.woff2') format('woff2'),
-       url('fonts/Firago.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.sub-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-body {
-  font-family: 'Firago', sans-serif;
+.logo {
+}
+.logo__img {
+  width: 16rem;
+  height: auto;
+}
+
+.header__navigation {
+}
+
+.header__nav-link {
+  color: #fff;
+  background-color: #ec5e2a;
+  text-decoration: none;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: baseline;
+  align-items: center;
+  border-radius: 1rem;
+}
+.header__nav-text {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: bold;
+}
+
+.header__profile {
+  display: flex;
+  gap: 1rem;
+}
+/* main */
+
+/* footer */
+
+.footer {
+  background-color: #edebebbd;
 }

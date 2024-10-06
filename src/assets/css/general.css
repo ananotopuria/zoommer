@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "Firago";
+  src: url("fonts/Firago.woff2") format("woff2"),
+    url("fonts/Firago.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Firago", sans-serif;
+}
+.container {
+  margin: 0 auto;
+  width: 120rem;
+}
