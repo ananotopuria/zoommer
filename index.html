@@ -96,24 +96,93 @@
                 />
               </div>
             </div>
-            <div class="header__user header__user--cart">
+            <button class="header__user header__user--cart">
               <img
                 class="header__icon"
                 src="https://zoommer.ge/icons/header-cart.svg"
                 alt="Cart Icon"
               />
               <p class="header__text">კალათა</p>
-            </div>
-            <div class="header__user header__user--login">
+            </button>
+            <button class="header__user header__user--login">
               <img
                 class="header__icon"
                 src="https://zoommer.ge/icons/user-icon.svg"
                 alt="User Icon"
               />
               <p class="header__text">შესვლა</p>
+            </button>
+            <div id="cartModal" class="modal hidden">
+              <div class="modal__container">
+                <h5>კალათა</h5>
+                <p>0 პროდუქტი</p>
+              </div>
+              <img
+                class="modal__img"
+                src="https://zoommer.ge/icons/emptybag.svg"
+                alt="shop cart img"
+              />
+              <div class="modal__container">
+                <p>ჯამური ფასი: 0 ₾</p>
+                <button class="cart-btn">კალათის გახსნა</button>
+              </div>
+            </div>
+            <div id="loginModal" class="modal hidden">
+              <img
+                class="close-btn"
+                src="https://zoommer.ge/icons/mobile-modal-close.svg"
+                alt="close-btn"
+              />
+              <div class="login__tab-container">
+                <button
+                  class="btn login__tab login__tab--1 login__tab--active"
+                  data-tab="1"
+                >
+                  ავტორიზაცია
+                </button>
+                <button class="btn login__tab login__tab--2" data-tab="2">
+                  რეგისტრაცია
+                </button>
+              </div>
+              <div
+                class="login__content login__content--1 login__content--active"
+              >
+                <div class="modal__btns">
+                  <button class="modal__btns-btn1">ნომრით ავტორიზაცია</button>
+                  <button class="modal__btns-btn2">მეილით ავტორიზაცია</button>
+                </div>
+                <form class="modal__form">
+                  <input
+                    class="modal-input input-field"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="ელფოსტა"
+                  />
+
+                  <input
+                    class="modal-input input-field"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="პაროლი"
+                  />
+
+                  <button type="submit" class="submit-btn">შესვლა</button>
+                </form>
+              </div>
+              <div class="login__content login__content--2 login__content">
+                <form class="modal__form">
+                  <button type="submit" class="submit-btn">რეგისტრაცია</button>
+                </form>
+              </div>
             </div>
             <div class="flag__container">
-              <img class="flag" src="https://zoommer.ge/icons/footer/flag-geo.png" alt="flag">
+              <img
+                class="flag"
+                src="https://zoommer.ge/icons/footer/flag-geo.png"
+                alt="flag"
+              />
             </div>
           </div>
         </div>
