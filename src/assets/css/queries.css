@@ -1,8 +1,31 @@
-/* 1024px */
-@media only screen and (max-width: 64em) {
+/* 1200px */
+@media only screen and (max-width: 75em) {
   .sup-header {
     display: none;
   }
+  .sub-header {
+    display: none;
+  }
+  .navigation {
+    display: block;
+  }
+  .container {
+    width: 100%;
+  }
+  body.sticky .navigation {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 999; 
+    background-color: ##edebebbd; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+  }
+}
+
+/* 1024px */
+@media only screen and (max-width: 64em) {
 }
 /* 900px */
 @media only screen and (max-width: 56.25em) {
