@@ -37,6 +37,17 @@
     height: 8rem;
     border-top: 1px solid #ddd;
   }
+  .hero{
+    display: none;
+  }
+  .hero__slider-container{
+    /* max-width: 60rem; */
+    max-weight: 100vw;
+    
+  }
+  .small__slider{
+    display: block;
+  }
 }
 
 /* 1024px */
