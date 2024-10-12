@@ -7,7 +7,23 @@ import { makeSticky } from "./src/js/stickyNavigation";
 
 sayHello();
 
-setupTabs();
+// setupTabs();
+
+setupTabs(
+  '.login__tab',               
+  '.login__tab-container',      
+  '.login__content',            
+  'login__tab--active',         
+  'login__content--active'      
+);
+
+setupTabs(
+  '.side__navigation-li',             
+  '.side__navigation-list',           
+  '.navigation__tab-content',         
+  'side__navigation--active',         
+  'navigation__tab--active'           
+);
 
 closeModalWindow('loginModal');
 
