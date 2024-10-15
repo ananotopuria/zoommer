@@ -48,6 +48,21 @@
   .small__slider{
     display: block;
   }
+  .footer__nav{
+    padding: 0 4rem;
+    flex-wrap: wrap;
+  }
+  .footer__nav-list{
+    flex: 1 1 50%;
+    padding: 0 2rem;
+  }
+  .footer__apps{
+    padding: 2rem 20rem;
+  }
+  .rights{
+    padding-bottom: 10rem;
+  }
+
 }
 
 /* 1024px */
