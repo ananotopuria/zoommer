@@ -716,3 +716,23 @@
   color: #666;
 
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 18rem;
+  right: 2rem;
+  display: none;
+  padding: 1.5rem;
+  background-color: #edebebbd;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.show {
+  display: block;
+}

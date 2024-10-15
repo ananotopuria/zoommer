@@ -6,6 +6,7 @@ import { openMenu, closeMenu } from "./src/js/menu";
 import { makeSticky } from "./src/js/stickyNavigation";
 import { initSlider } from './src/js/heroSlider.js';
 import { imgSlider } from './src/js/imgSlider.js';
+import { scrollToTop } from './src/js/scrollToTop.js';
 
 sayHello();
 
@@ -50,4 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   imgSlider(); 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  scrollToTop();
 });
