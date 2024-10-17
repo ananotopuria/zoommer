@@ -81,7 +81,7 @@
             </div>
             <div class="header-search">
               <div class="header-search__search">
-                <a class="header-search__search-icon-link" href="#">
+                <a class="header-search__search-icon-link" href="#" id="searchButton">
                   <img
                     class="header-search__icon"
                     src="https://zoommer.ge/icons/main-search.svg"
@@ -95,6 +95,46 @@
                   placeholder="ძიება"
                   autocomplete="off"
                 />
+              </div>
+            </div>
+            <div id="popularSearchesModal" class="search-modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>პოპულარული სერჩები:</h2>
+                <ul class="search__item">
+                  <li class="search__item-list">iPhone 15</li>
+                  <li class="search__item-list">iPhone 15 Pro</li>
+                  <li class="search__item-list">Galaxy S24</li>
+                  <li class="search__item-list">iPhone 11</li>
+                  <li class="search__item-list">iPhone 12</li>
+                  <li class="search__item-list">iPhone 14</li>
+                  <li class="search__item-list">iPhone 13</li>
+                  <li class="search__item-list">Laptops</li>
+                  <li class="search__item-list">PS5</li>
+                  <li class="search__item-list">JBL</li>
+                  <li class="search__item-list">MacBook</li>
+                  <li class="search__item-list">Pixel</li>
+                  <li class="search__item-list">Polaroid</li>
+                  <li class="search__item-list">iPad</li>
+                  <li class="search__item-list">Dyson Hair Dryer</li>
+                  <li class="search__item-list">Xiaomi 14</li>
+                  <li class="search__item-list">Redmi Note 12</li>
+                  <li class="search__item-list">Galaxy S23</li>
+                  <li class="search__item-list">AirPods</li>
+                  <li class="search__item-list">TV</li>
+                  <li class="search__item-list">Smart Band 8</li>
+                  <li class="search__item-list">Treadmill</li>
+                  <li class="search__item-list">Macbook M3</li>
+                  <li class="search__item-list">Apple Watch Ultra 2</li>
+                  <li class="search__item-list">Dyson Airwrap</li>
+                  <li class="search__item-list">PS5 Controller</li>
+                  <li class="search__item-list">Marshall</li>
+                  <li class="search__item-list">Xbox</li>
+                  <li class="search__item-list">DJI</li>
+                  <li class="search__item-list">Dyson Vacuum Cleaner</li>
+                  <li class="search__item-list">Power Bank</li>
+                  <li class="search__item-list">Segway</li>
+                </ul>
               </div>
             </div>
             <button class="header__user header__user--cart">
@@ -1153,6 +1193,10 @@
             <div class="hero__slider-container" id="sliderWrapper">
               <div class="hero__slider-wrapper">
                 <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fb161174e-a8c6-413b-bbea-32bbfe31937e_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
                   src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F49d18bd0-0589-4947-a223-5df70b44e7a5_Thumb.jpeg&w=3840&q=75"
                   alt="slider img product"
                 />
@@ -2210,8 +2254,10 @@
         id="scrollToTopBtn"
         class="scroll-to-top"
         src="https://zoommer.ge/icons/arrow-up-web.svg"
-        alt=""
+        alt="icon"
       />
+      <img class="compare" src="https://zoommer.ge/icons/quick-btn-compare.svg" alt="icon">
+      <button class="chatbot"><ion-icon name="chatbubbles-outline"></ion-icon></button>
     </footer>
     <script
       type="module"

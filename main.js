@@ -7,7 +7,7 @@ import { initSlider } from "./src/js/heroSlider.js";
 import { imgSlider } from "./src/js/imgSlider.js";
 import { scrollToTop } from "./src/js/scrollToTop.js";
 import { initProductSlider, initBrandSlider } from './src/js/slider.js';
-
+import { initializeSearchModal } from "./src/js/searchModal.js";
 
 setupTabs(
   ".login__tab",
@@ -32,6 +32,10 @@ closeMenu();
 
 makeSticky(".sub-header");
 makeSticky(".navigation");
+
+document.addEventListener("DOMContentLoaded", function() {
+  initializeSearchModal();
+});
 
 document.querySelector(".header__user--cart").addEventListener("click", () => {
   toggleModal("cartModal");
