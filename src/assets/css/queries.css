@@ -37,9 +37,9 @@
     height: 8rem;
     border-top: 1px solid #ddd;
   }
-  .hero {
+  /* .hero {
     display: none;
-  }
+  } */
   .hero__slider-container {
     /* max-width: 60rem; */
     max-weight: 100vw;
@@ -82,4 +82,26 @@
   /* body{
         background-color: red;
     } */
+}
+
+
+
+/* 1200px */
+@media only screen and (max-width: 75em) {
+  .hero__slider{
+    display: none;
+  }
+  .hero__nav{
+    z-index: 999999;
+  }
+  .sub__nav-content-list{}
+  .sub__nav-content-title{}
+  .sub__nav-content-li{}
+  .hero__nav-btn{}
+  .nav__border{}
+  .hero__nav-icon{}
+  .nav__border{}
+  .hero__nav-title{}
+  .sub-nav{}
+  .sub__nav-content{}
 }

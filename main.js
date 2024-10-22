@@ -8,22 +8,25 @@ import { imgSlider } from "./src/js/imgSlider.js";
 import { scrollToTop } from "./src/js/scrollToTop.js";
 import { initProductSlider, initBrandSlider } from './src/js/slider.js';
 import { initializeSearchModal } from "./src/js/searchModal.js";
+import { loadDynamicNav } from "./src/js/categories.js";
+// setupTabs(
+//   ".login__tab",
+//   ".login__tab-container",
+//   ".login__content",
+//   "login__tab--active",
+//   "login__content--active"
+// );
 
-setupTabs(
-  ".login__tab",
-  ".login__tab-container",
-  ".login__content",
-  "login__tab--active",
-  "login__content--active"
-);
+// setupTabs(
+//   ".side__navigation-li",
+//   ".side__navigation-list",
+//   ".navigation__tab-content",
+//   "side__navigation--active",
+//   "navigation__tab--active"
+// );
 
-setupTabs(
-  ".side__navigation-li",
-  ".side__navigation-list",
-  ".navigation__tab-content",
-  "side__navigation--active",
-  "navigation__tab--active"
-);
+
+setupTabs();
 
 closeModalWindow("loginModal");
 
@@ -60,3 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 initProductSlider();
 initBrandSlider();
+
+loadDynamicNav();
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  loadDynamicNav();
+});

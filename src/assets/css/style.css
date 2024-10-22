@@ -578,6 +578,7 @@
 .hero__nav {
   border-radius: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
 }
 .hero__nav-list {
   list-style: none;
@@ -599,12 +600,15 @@
   width: 100%;
   background-color: #fff;
   border: none;
-  padding: 1rem;
+  padding: 1.12rem;
   cursor: pointer;
 }
 .hero__nav-btn:hover {
   background-color: #edebebee;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
+
 .hero__nav-icon {
   color: #777;
   width: 2rem;
