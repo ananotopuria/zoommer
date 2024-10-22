@@ -678,15 +678,21 @@
 
         <!-- slider -->
 
-
-       
-        
-    
-
         <section class="product">
           <h2 class="hero">სულსწრაფი შეთავაზებები</h2>
-          <div class="product-container" id="product-container">
-          </div>
+          <button
+            class="hero__slider-btn-product prev-product"
+            onclick="prevSlideProduct()"
+          >
+            ‹
+          </button>
+          <button
+            class="hero__slider-btn-product next-product"
+            onclick="nextSlideProduct()"
+          >
+            ›
+          </button>
+          <div class="product-container" id="product-container"></div>
         </section>
 
         <!-- <section class="product">
@@ -1673,4 +1679,5 @@
     ></script>
   </body>
   <script type="module" src="/main.js"></script>
+  <script type="module" src="src/js/loadProducts.js"></script>
 </html>
