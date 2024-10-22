@@ -6,9 +6,14 @@ import { makeSticky } from "./src/js/stickyNavigation";
 import { initSlider } from "./src/js/heroSlider.js";
 import { imgSlider } from "./src/js/imgSlider.js";
 import { scrollToTop } from "./src/js/scrollToTop.js";
-import { initProductSlider, initBrandSlider } from './src/js/slider.js';
+// import { initProductSlider, initBrandSlider } from './src/js/slider.js';
 import { initializeSearchModal } from "./src/js/searchModal.js";
 import { loadDynamicNav } from "./src/js/categories.js";
+import { loadProducts } from './src/js/loadProducts.js';
+import { initProductSlider } from "./src/js/slider.js";
+
+
+// initProductSlider();
 // setupTabs(
 //   ".login__tab",
 //   ".login__tab-container",
@@ -61,12 +66,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-initProductSlider();
-initBrandSlider();
+// initProductSlider();
+// initBrandSlider();
 
 loadDynamicNav();
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
   
-  loadDynamicNav();
+  // loadDynamicNav();
+// });
+
+loadProducts();
+
+document.addEventListener('DOMContentLoaded', () => {
+  initProductSlider();
+  initBrandSlider();
 });

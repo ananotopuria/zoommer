@@ -1,39 +1,22 @@
+
+
 export function initProductSlider() {
-  const productContainers = [
-    ...document.querySelectorAll(".product-container"),
-  ];
-  const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
-  const preBtn = [...document.querySelectorAll(".pre-btn")];
+  const productSections = [...document.querySelectorAll('.product-section')];
+  const preBtns = [...document.querySelectorAll('.pre-btn')];
+  const nxtBtns = [...document.querySelectorAll('.nxt-btn')];
 
-  productContainers.forEach((item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
+  productSections.forEach((section, i) => {
+    let sectionWidth = section.getBoundingClientRect().width;
 
-    nxtBtn[i].addEventListener("click", () => {
-      item.scrollLeft += containerWidth;
-    });
+    if (nxtBtns[i] && preBtns[i]) {  
+      nxtBtns[i].addEventListener('click', () => {
+        section.scrollLeft += sectionWidth;
+      });
 
-    preBtn[i].addEventListener("click", () => {
-      item.scrollLeft -= containerWidth;
-    });
+      preBtns[i].addEventListener('click', () => {
+        section.scrollLeft -= sectionWidth;
+      });
+    }
   });
 }
 
-export function initBrandSlider() {
-  const brandContainers = [...document.querySelectorAll(".brand-container")];
-  const brandnxtBtn = [...document.querySelectorAll(".nxt-brand-btn")];
-  const brandpreBtn = [...document.querySelectorAll(".pre-brand-btn")];
-
-  brandContainers.forEach((item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
-
-    brandnxtBtn[i].addEventListener("click", () => {
-      item.scrollLeft += containerWidth;
-    });
-
-    brandpreBtn[i].addEventListener("click", () => {
-      item.scrollLeft -= containerWidth;
-    });
-  });
-}
