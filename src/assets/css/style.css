@@ -482,9 +482,27 @@
   border-radius: 50%;
   padding: 0.5rem;
 }
+.side__navigation-nav {
+  max-height: 80vh; 
+  overflow-y: auto;  
+  scrollbar-width: thin; 
+}
+
+.navigation__tab-wrapper {
+  max-height: 50rem;
+  overflow-y: auto; 
+  scrollbar-width: thin;
+}
+
+
 /* side navigation list */
 .side__navigation-nav {
   width: 8rem;
+  overflow-y: auto; 
+}
+.navigation__tab-wrapper {
+  max-height: 80vh; 
+  overflow-y: auto;
 }
 .side__navigation-list {
   display: flex;
@@ -514,6 +532,7 @@
 }
 .navigation__tab-content {
   display: none;
+ 
 }
 .navigation__tab--active {
   display: block;
@@ -530,11 +549,18 @@
 .navigation__tab-content {
   padding: 2rem;
 }
+.navigation__card-container{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+}
 .navigation__card {
   border-radius: 1rem;
   background-color: #f2f2f2;
   width: 100%;
-  height: 14rem;
+  width: 15rem;
+  height: 10rem;
   overflow: hidden;
   position: relative;
   margin-top: 2rem;

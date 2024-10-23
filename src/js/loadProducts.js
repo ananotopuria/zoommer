@@ -79,6 +79,5 @@ function initSlider() {
     }
   };
 
-  // Initial display update
   updateDisplay();
 }

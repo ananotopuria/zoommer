@@ -1,5 +1,3 @@
-
-
 export function initProductSlider() {
   const productSections = [...document.querySelectorAll('.product-section')];
   const preBtns = [...document.querySelectorAll('.pre-btn')];

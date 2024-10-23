@@ -6,30 +6,15 @@ import { makeSticky } from "./src/js/stickyNavigation";
 import { initSlider } from "./src/js/heroSlider.js";
 import { imgSlider } from "./src/js/imgSlider.js";
 import { scrollToTop } from "./src/js/scrollToTop.js";
-// import { initProductSlider, initBrandSlider } from './src/js/slider.js';
 import { initializeSearchModal } from "./src/js/searchModal.js";
 import { loadDynamicNav } from "./src/js/categories.js";
 import { loadProducts } from './src/js/loadProducts.js';
 import { initProductSlider } from "./src/js/slider.js";
+import { fetchCategories } from './src/js/category.js';
 
-
-// initProductSlider();
-// setupTabs(
-//   ".login__tab",
-//   ".login__tab-container",
-//   ".login__content",
-//   "login__tab--active",
-//   "login__content--active"
-// );
-
-// setupTabs(
-//   ".side__navigation-li",
-//   ".side__navigation-list",
-//   ".navigation__tab-content",
-//   "side__navigation--active",
-//   "navigation__tab--active"
-// );
-
+document.addEventListener('DOMContentLoaded', () => {
+    fetchCategories();
+});
 
 setupTabs();
 
@@ -65,16 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollToTop();
 });
 
-
-// initProductSlider();
-// initBrandSlider();
-
 loadDynamicNav();
-
-// document.addEventListener("DOMContentLoaded", () => {
-  
-  // loadDynamicNav();
-// });
 
 loadProducts();
 
