@@ -5,3 +5,280 @@
 /* ფილიალები */
 /* ყველა აქცია */
 
+/* სავაჭრო პოლიტიკის გვერდის სტილები */
+.main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.trade-politics-div-header {
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f2f2f2;
+}
+.trade-politics-header {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+.trade-politics-seconde-title h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.preambula h3 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-firago);
+  -webkit-tap-highlight-color: transparent;
+  color: rgb(103, 106, 108);
+  font-weight: 700;
+}
+.preambula-p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-firago);
+  -webkit-tap-highlight-color: transparent;
+  width: 4px;
+  height: 4px;
+  border-radius: 12px;
+}
+.describe-termines h3 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-firago);
+  -webkit-tap-highlight-color: transparent;
+  color: rgb(103, 106, 108);
+}
+
+.general-rules h3 {
+  color: rgb(103, 106, 108);
+  font-size: 10pt;
+  border-radius: 12px;
+}
+
+.general-rules span {
+  color: rgb(103, 106, 108);
+  font-weight: 700;
+}
+
+.general-rules p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-firago);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* განვადების გვერდის სტილები */
+.main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.instalment-div-header {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-firago);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.instalment-header {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.instalment-seconde title h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13.999999999999998pt;
+  font-family: Arial, sans-serif;
+  color: #000000;
+  background-color: transparent;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+
+.instalment-rules {
+  ox-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-firago);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nabiji2 {
+  height: 197px;
+  width: 602px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nabiji3 {
+  width: 602px;
+  height: 219px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nabiji4 {
+  height: 436px;
+  width: 602px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nabiji5 {
+  height: 295px;
+  width: 451px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instalment-rules span {
+  font-size: 11pt;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* career გვერდების სტილი */
+.main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.career-div-header {
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+.career-header {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+.career-seconde-tittle h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.career-seconde-tittle h3 {
+  font-size: 14px;
+  font-family: Calibri, sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+.career-history img {
+  width: 232.967px;
+  float: right;
+  height: 232.967px;
+}
+.development-history img {
+  width: 232.633px;
+  float: right;
+  height: 232.633px;
+}
+/* trade in გვერდების სტილი */
+.main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.trade-in-div-header {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-firago);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* filialebi */
+
+.branches-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.branches-filter div {
+  display: flex;
+  gap: 18px;
+}
+
+#cityDropdown {
+  position: relative;
+}
+#cityButton {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#cityList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#cityList.hidden {
+  display: none;
+}
+.city-button {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#cityDropdown {
+  position: relative;
+}
+.branches-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.branch-card {
+  background-color: #f2f2f2;
+  padding: 10px 20 px;
+  cursor: pointer;
+}
