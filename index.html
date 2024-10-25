@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="https://zoommer.ge/icons/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/css/style.css" />
     <link rel="stylesheet" href="./src/assets/css/general.css" />
     <link rel="stylesheet" href="./src/assets/css/queries.css" />
     <title>Zoommer.ge</title>
@@ -80,7 +81,11 @@
             </div>
             <div class="header-search">
               <div class="header-search__search">
-                <a class="header-search__search-icon-link" href="#">
+                <a
+                  class="header-search__search-icon-link"
+                  href="#"
+                  id="searchButton"
+                >
                   <img
                     class="header-search__icon"
                     src="https://zoommer.ge/icons/main-search.svg"
@@ -94,6 +99,46 @@
                   placeholder="ძიება"
                   autocomplete="off"
                 />
+              </div>
+            </div>
+            <div id="popularSearchesModal" class="search-modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>პოპულარული სერჩები:</h2>
+                <ul class="search__item">
+                  <li class="search__item-list">iPhone 15</li>
+                  <li class="search__item-list">iPhone 15 Pro</li>
+                  <li class="search__item-list">Galaxy S24</li>
+                  <li class="search__item-list">iPhone 11</li>
+                  <li class="search__item-list">iPhone 12</li>
+                  <li class="search__item-list">iPhone 14</li>
+                  <li class="search__item-list">iPhone 13</li>
+                  <li class="search__item-list">Laptops</li>
+                  <li class="search__item-list">PS5</li>
+                  <li class="search__item-list">JBL</li>
+                  <li class="search__item-list">MacBook</li>
+                  <li class="search__item-list">Pixel</li>
+                  <li class="search__item-list">Polaroid</li>
+                  <li class="search__item-list">iPad</li>
+                  <li class="search__item-list">Dyson Hair Dryer</li>
+                  <li class="search__item-list">Xiaomi 14</li>
+                  <li class="search__item-list">Redmi Note 12</li>
+                  <li class="search__item-list">Galaxy S23</li>
+                  <li class="search__item-list">AirPods</li>
+                  <li class="search__item-list">TV</li>
+                  <li class="search__item-list">Smart Band 8</li>
+                  <li class="search__item-list">Treadmill</li>
+                  <li class="search__item-list">Macbook M3</li>
+                  <li class="search__item-list">Apple Watch Ultra 2</li>
+                  <li class="search__item-list">Dyson Airwrap</li>
+                  <li class="search__item-list">PS5 Controller</li>
+                  <li class="search__item-list">Marshall</li>
+                  <li class="search__item-list">Xbox</li>
+                  <li class="search__item-list">DJI</li>
+                  <li class="search__item-list">Dyson Vacuum Cleaner</li>
+                  <li class="search__item-list">Power Bank</li>
+                  <li class="search__item-list">Segway</li>
+                </ul>
               </div>
             </div>
             <button class="header__user header__user--cart">
@@ -146,6 +191,7 @@
               </div>
               <div
                 class="login__content login__content--1 login__content--active"
+                data-tab="1"
               >
                 <div class="modal__btns">
                   <button class="modal__btns-btn1">ნომრით ავტორიზაცია</button>
@@ -159,7 +205,6 @@
                     id="email"
                     placeholder="ელფოსტა"
                   />
-
                   <input
                     class="modal-input input-field"
                     type="password"
@@ -171,7 +216,10 @@
                   <button type="submit" class="submit-btn">შესვლა</button>
                 </form>
               </div>
-              <div class="login__content login__content--2 login__content">
+              <div
+                class="login__content login__content--2 login__content"
+                data-tab="2"
+              >
                 <form class="modal__form">
                   <button type="submit" class="submit-btn">რეგისტრაცია</button>
                 </form>
@@ -187,61 +235,1222 @@
           </div>
         </div>
       </div>
+      <div class="navigation none">
+        <div class="navigation__wrapper">
+          <div class="navigation__container">
+            <img
+              class="burger-btn"
+              src="https://zoommer.ge/icons/burger-icon.svg"
+              alt="logo"
+            />
+            <img
+              class="logo__img-1"
+              src="https://zoommer.ge/icons/main-logo.svg"
+              alt="logo"
+            />
+          </div>
+          <div class="navigation__container">
+            <img src="	https://zoommer.ge/icons/search.svg" alt="search-logo" />
+            <img
+              src="	https://zoommer.ge/icons/cart.svg
+            "
+              alt="cart-logo"
+            />
+            <img
+              class="flag"
+              src="https://zoommer.ge/icons/footer/flag-geo.png"
+              alt="flag"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="side__navigation">
+        <div class="side__menu hidden">
+          <div class="side__navigation-header">
+            <button class="side__menu-close">
+              <img
+                src="https://zoommer.ge/icons/burger-close.svg"
+                alt="close btn"
+              />
+            </button>
+            <div class="navigation__header-search">
+              <div class="header-search__search">
+                <a class="header-search__search-icon-link" href="#">
+                  <img
+                    class="header-search__icon"
+                    src="https://zoommer.ge/icons/main-search.svg"
+                    alt="Search Icon"
+                  />
+                </a>
+                <input
+                  class="header-search__input"
+                  type="text"
+                  name="q"
+                  placeholder="ძიება"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="side__navigation-tabs">
+            <!-- side navigation -->
+            <nav class="side__navigation-nav">
+              <ul id="categoryList" class="side__navigation-list"></ul>
+            </nav>
+            <div id="subcategoryWrapper" class="navigation__tab-wrapper"></div>
+          </div>
+        </div>
+      </div>
     </header>
+    <div class="sub__navigation hidden">
+      <nav class="sub__navigation-nav">
+        <ul class="sub__navigation-list">
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon icon-1"
+              name="home-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title title-1">მთავარი</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon"
+              name="apps-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">კატეგორიები</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon icon-3"
+              name="flash-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">აქციები</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon"
+              name="repeat-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">შედარება</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon"
+              name="person-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">შესვლა</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="container">
-      <main>
+      <main class="main">
         <section class="hero">
-          <h3>navigation</h3>
-          <h3>slider</h3>
+          <div class="hero__nav"></div>
+          <div class="hero__slider">
+            <div class="hero__slider-container" id="sliderWrapper">
+              <div class="hero__slider-wrapper">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fb161174e-a8c6-413b-bbea-32bbfe31937e_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F49d18bd0-0589-4947-a223-5df70b44e7a5_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F28267f59-a845-4852-a0cc-05d184714fc7_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F3ee0fed9-a1fc-4bf7-ab02-f24a27d4194d_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Ff8ab115e-4ec8-43c1-9856-1183d61ed9f0_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F6f9d6233-91ff-4ad1-b7ca-18f219572332_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F345eddb5-786c-4cd7-8557-c9906bb34ab1_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F6b24321f-727c-4c4c-840e-161e610a7590_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F753ae0c2-913e-4258-8f32-cc3ffb3a5d85_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fc635c17f-aa5c-4210-84f2-81ee1e17149d_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F98f8b232-57da-471c-995a-790a7082ab43_Thumb.jpeg&w=3840&q=75"
+                  alt="slider img product"
+                />
+              </div>
+              <button class="hero__slider-btn prev" onclick="prevSlide()">
+                ‹
+              </button>
+              <button class="hero__slider-btn next" onclick="nextSlide()">
+                ›
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="small__slider none">
+          <div class="image-slider overflow-hidden" id="image-slider">
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F49d18bd0-0589-4947-a223-5df70b44e7a5_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F28267f59-a845-4852-a0cc-05d184714fc7_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F3ee0fed9-a1fc-4bf7-ab02-f24a27d4194d_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Ff8ab115e-4ec8-43c1-9856-1183d61ed9f0_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F6f9d6233-91ff-4ad1-b7ca-18f219572332_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F345eddb5-786c-4cd7-8557-c9906bb34ab1_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F6b24321f-727c-4c4c-840e-161e610a7590_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F753ae0c2-913e-4258-8f32-cc3ffb3a5d85_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fc635c17f-aa5c-4210-84f2-81ee1e17149d_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+            <img
+              src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F98f8b232-57da-471c-995a-790a7082ab43_Thumb.jpeg&w=3840&q=75"
+              alt="slider img product"
+            />
+          </div>
+        </section>
+
+        <!-- slider -->
+
+        <section class="product">
+          <h2 class="hero">სულსწრაფი შეთავაზებები</h2>
+          <button
+            class="hero__slider-btn-product prev-product"
+            onclick="prevSlideProduct()"
+          >
+            ‹
+          </button>
+          <button
+            class="hero__slider-btn-product next-product"
+            onclick="nextSlideProduct()"
+          >
+            ›
+          </button>
+          <div class="product-container" id="product-container"></div>
+        </section>
+
+        <section class="product">
+          <h2 class="hero">სულსწრაფი შეთავაზებები</h2>
+
+          <div class="product-container">
+            <div class="product-card">
+              <button class="pre-btn">
+                <img src="./src/images/arrow.png" alt="button" />
+              </button>
+              <button class="nxt-btn">
+                <img src="./src/images/arrow.png" alt="button" />
+              </button>
+
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F953d77a2-d1d3-4e7f-9f46-a40081ac6552_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F90860f84-46c8-4175-b476-5a15cb2ca95c_Thumb.png&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fd68822ca-3f3a-48e5-872e-b1a36a64e91a_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">Apple MacBook Pro 16 inch 2023</p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fd991a03d-874e-4bba-b748-b61eb6141585_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <div class="gift"><img src="./src/images/gift.png" /></div>
+                <div class="best-price">BEST PRICE</div>
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fe119018b-963d-42cd-ab66-ca40886d16ec_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="product">
-          <div>
-            <h2>სულსწრაფობას მოუხმე</h2>
+          <h2 class="hero">აღმოაჩინე რა საჩუქარი გელოდება</h2>
+
+          <div class="product-container">
+            <div class="product-card">
+              <button class="pre-btn">
+                <img src="./src/images/arrow.png" alt="" />
+              </button>
+              <button class="nxt-btn">
+                <img src="./src/images/arrow.png" alt="" />
+              </button>
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F465027be-5529-459a-b374-f2f6c2007c89_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <div class="gift"><img src="./src/images/gift.png" /></div>
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F019dd9bd-65f5-4c21-b136-80e5e4c79e61_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F760c6869-0e06-4af6-92f5-8ee720e5956e_Thumb.png&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <div class="gift"><img src="./src/images/gift.png" /></div>
+                <div class="best-price">BEST PRICE</div>
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F7b281df2-7b42-4453-ba7f-f210a5835fb2_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F4e93f9d5-67c3-41fd-8611-10097c96e620_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fc8f9f0f6-9663-44f0-85e0-19f173781a18_Thumb.png&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h2>აღმოაჩინე რა საჩუქარი გელოდება</h2>
+        </section>
+        <section class="brands">
+          <h2 class="hero">ბრენდები</h2>
+          <div class="brand-container">
+            <div class="brand-card">
+              <button class="pre-brand-btn">
+                <img src="./src/images/arrow.png" alt="button" />
+              </button>
+              <button class="nxt-brand-btn">
+                <img src="./src/images/arrow.png" alt="button" />
+              </button>
+              <div class="brand-image">
+                <img
+                  src="https://s3.zoommer.ge/site/b10f97ef-8fec-416a-983b-b14b71e2f1acb04175ae-2b3e-43eb-8734-abee90cc626e.png"
+                />
+              </div>
+            </div>
+            <div class="brand-card">
+              <div class="brand-image">
+                <img
+                  src="https://s3.zoommer.ge/site/ec6ff046-3178-4f3f-b5e6-1d00ea00fb192973f52e-1c88-49a3-a4d7-66740567eb5c.png"
+                />
+              </div>
+            </div>
+            <div class="brand-card">
+              <div class="brand-image">
+                <img
+                  src="https://s3.zoommer.ge/site/b10f97ef-8fec-416a-983b-b14b71e2f1acb04175ae-2b3e-43eb-8734-abee90cc626e.png"
+                />
+              </div>
+            </div>
+            <div class="brand-card">
+              <div class="brand-image">
+                <img
+                  src="https://s3.zoommer.ge/site/ec6ff046-3178-4f3f-b5e6-1d00ea00fb192973f52e-1c88-49a3-a4d7-66740567eb5c.png"
+                />
+              </div>
+            </div>
+            <div class="brand-card">
+              <div class="brand-image">
+                <img
+                  src="https://s3.zoommer.ge/site/b10f97ef-8fec-416a-983b-b14b71e2f1acb04175ae-2b3e-43eb-8734-abee90cc626e.png"
+                />
+              </div>
+            </div>
+            <div class="brand-card">
+              <div class="brand-image">
+                <img
+                  src="https://s3.zoommer.ge/site/b10f97ef-8fec-416a-983b-b14b71e2f1acb04175ae-2b3e-43eb-8734-abee90cc626e.png"
+                />
+              </div>
+            </div>
           </div>
-          <div>
-            <h2>ახალი მოდელები</h2>
+        </section>
+        <section class="product">
+          <h2 class="hero">თავის მოვლა</h2>
+
+          <div class="product-container">
+            <div class="product-card">
+              <button class="pre-btn">
+                <img src="./src/images/arrow.png" alt="" />
+              </button>
+              <button class="nxt-btn">
+                <img src="./src/images/arrow.png" alt="" />
+              </button>
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fdab460bf-48ec-4ff4-9766-39e2aaac00b2ec5c0017-bda3-482e-bbed-f4619a6b6951.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fzoommer-images%2Fthumbs%2F0191041_xiaomi-mi-x-simpleway-foaming-hand-soap-white_550.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fdab460bf-48ec-4ff4-9766-39e2aaac00b2ec5c0017-bda3-482e-bbed-f4619a6b6951.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <div class="best-price">BEST PRICE</div>
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F94dc10a4-2d5d-4c25-88d9-414e54b3435016732133-91fd-42ca-a439-87fcf43f79ec.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fzoommer-images%2Fthumbs%2F0150072_xiaomi-mi-automatic-foaming-soap-dispenser-mjxsj03xw-white_550.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fzoommer-images%2Fthumbs%2F0150072_xiaomi-mi-automatic-foaming-soap-dispenser-mjxsj03xw-white_550.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h2>ტელევიზორები</h2>
-          </div>
-          <div>
-            <h2>ბრენდები</h2>
-          </div>
-          <div>
-            <h2>თავის მოვლა</h2>
-          </div>
-          <div>
-            <h2>ყურსასმენები Buds</h2>
-          </div>
-          <div>
-            <h2>ყურსასმენები Headphones</h2>
-          </div>
-          <div>
-            <h2>ლეპტოპები</h2>
-          </div>
-          <div>
-            <h2>კონსოლები</h2>
-          </div>
-          <div>
-            <h2>მანქანის აქსესუარები</h2>
-          </div>
-          <div>
-            <h2>ჭკვიანი სახლი</h2>
-          </div>
-          <div>
-            <h2>top პროდუქტები</h2>
+        </section>
+        <section class="product">
+          <h2 class="hero">ახალი მოდელები</h2>
+
+          <div class="product-container">
+            <div class="product-card">
+              <button class="pre-btn">
+                <img src="./src/images/arrow.png" alt="" />
+              </button>
+              <button class="nxt-btn">
+                <img src="./src/images/arrow.png" alt="" />
+              </button>
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F9b93844a-3e89-4473-b6d2-2a322dce92f8_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">230 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F94993e5f-f985-4464-a8fe-e77b08ae27e4_Thumb.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">210 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fc726bb28-6ceb-4b34-9a04-9dee8d188034dcd1f8f3-0591-4e6a-8d10-7ba2a00fb4aa.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2Fc726bb28-6ceb-4b34-9a04-9dee8d188034dcd1f8f3-0591-4e6a-8d10-7ba2a00fb4aa.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <div class="best-price">BEST PRICE</div>
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fzoommer-images%2Fthumbs%2F0186510_razer-gaming-headset-kaira-for-xbox-wl-black_550.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://zoommer.ge/_next/image?url=https%3A%2F%2Fs3.zoommer.ge%2Fsite%2F55d7fac3-d644-441b-9cea-571bb5543a355fb3b527-c0f8-446e-9c3d-41c11ce28ec8.jpeg&w=256&q=50"
+                  class="product-thumb"
+                  alt=""
+                />
+              </div>
+              <div class="product-info">
+                <div class="best-price">BEST PRICE</div>
+                <p><span class="price">20 ₾</span></p>
+                <p class="product-short-description">
+                  თვეში <span class="monthly-price">103</span> ლარიდან
+                </p>
+                <p class="product-desription">
+                  Apple iPhone 16 Pro Max e-SIM Only | 256GB Black
+                </p>
+                <div class="product-bottom">
+                  <img
+                    class="compare-card-image"
+                    src="./src/images/compare-card.svg"
+                  />
+                  <div class="product-cart-button">
+                    <img
+                      class="product-cart-item"
+                      src="./src/images/cart-button.svg"
+                    />
+                    <p class="product-cart-item product-cart-text">დამატება</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
     </div>
     <footer class="footer">
       <div class="container">
-        <h3>footer content</h3>
+        <ul class="footer__nav">
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">ნავიგაცია</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a class="footer__nav-link" href="#"
+                  >პერსონალურ მონაცემთა დაცვის პოლიტიკა</a
+                >
+              </li>
+              <li><a class="footer__nav-link" href="#">ჩვენ შესახებ</a></li>
+              <li>
+                <a class="footer__nav-link" href="#">წესები დაპირობები</a>
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#">მიწოდების სერვისი</a>
+              </li>
+              <li><a class="footer__nav-link" href="#">კარიერა</a></li>
+            </ul>
+          </li>
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">გადახდები</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a class="footer__nav-link" href="#">გადახდის მეთოდები</a>
+              </li>
+              <li><a class="footer__nav-link" href="#">გარანტია</a></li>
+              <li>
+                <a class="footer__nav-link" href="#">განვადება</a>
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#">ნივთის დაბრუნება</a>
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#"
+                  >ნივთის ონლაინ ყიდვის ინსტრუქცია</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">გამოგვყევი</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/fb.svg"
+                    alt="icon"
+                  /><span>Facebook</span></a
+                >
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/youtube.svg"
+                    alt="icon"
+                  /><span>Youtube</span></a
+                >
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/instagram.svg"
+                    alt="icon"
+                  /><span>Instagram</span></a
+                >
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="	https://zoommer.ge/icons/footer/tiktok.svg
+                  "
+                    alt="icon"
+                  /><span>Tik Tok</span></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">კონტაქტი</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/gmail.svg
+
+                  "
+                    alt="icon"
+                  /><span>Info@zoommer.ge</span></a
+                >
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/phone.svg
+
+                  "
+                    alt="icon"
+                  /><span>+995 (32) 2 60 30 60</span></a
+                >
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/locations.svg
+
+                  "
+                    alt="icon"
+                  /><span>ფილიალები</span></a
+                >
+              </li>
+              <li>
+                <a class="footer__nav-link" href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/locations.svg
+
+                  "
+                    alt="icon"
+                  /><span>კორპორატიული გაყიდვები</span></a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="footer__apps">
+          <p>Zoommer App</p>
+          <img
+            src="https://zoommer.ge/images/e-360.svg
+          "
+            alt="eccomerce360 logo"
+          />
+        </div>
       </div>
+      <div class="line"></div>
+      <p class="rights">Copyright © 2023 Zoommer.ge. All rights reserved.</p>
+      <img
+        id="scrollToTopBtn"
+        class="scroll-to-top"
+        src="https://zoommer.ge/icons/arrow-up-web.svg"
+        alt="icon"
+      />
+      <img
+        class="compare"
+        src="https://zoommer.ge/icons/quick-btn-compare.svg"
+        alt="icon"
+      />
+      <button class="chatbot">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+      </button>
     </footer>
-    <script type="module" src="/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
+  <script type="module" src="/main.js"></script>
+  <script type="module" src="src/js/loadProducts.js"></script>
 </html>
