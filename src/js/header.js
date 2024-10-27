@@ -292,6 +292,6 @@ export function loadHeader() {
       </div>
     </header>
     `;
-    document.body.insertAdjacentHTML('afterbegin', headerHTML); // Or specify another container if needed
+    document.body.insertAdjacentHTML('afterbegin', headerHTML);
   }
   

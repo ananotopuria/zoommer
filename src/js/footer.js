@@ -1,4 +1,3 @@
-// footer.js
 export function loadFooter() {
     const footerHTML = `
       <footer class="footer">
