@@ -13,13 +13,81 @@
   <body>
     <header></header>
     <main class="container">
-      <h2>ფილიალები</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum
-        officia libero error eveniet qui? Corrupti corporis debitis mollitia,
-        beatae impedit delectus atque, harum esse illo repudiandae perspiciatis
-        sapiente quasi.
-      </p>
+      <section class="branches-filter-bar">
+        <div class="page-title"><h2>ფილიალები</h2></div>
+        <div class="filter-form-box">
+          <form action="#">
+            <div class="filter-form">
+              <div>
+                <img src="../images/search-orange.svg" />
+                <input
+                  type="search"
+                  id="search"
+                  name="search"
+                  placeholder="მოძებნე ფილიალი"
+                />
+              </div>
+              <div>
+                <select>
+                  <option value="">ყველა ფილიალი</option>
+                  <option value="">თბილისი</option>
+                  <option value="">რუსთავი</option>
+                  <option value="">ბათუმი</option>
+                  <option value="">ქუთაისი</option>
+                  <option value="">ზუგდიდი</option>
+                  <option value="">თელავი</option>
+                  <option value="">ახალციხე</option>
+                  <option value="">გორი</option>
+                </select>
+              </div>
+              <div>
+                <input type="checkbox" id="open" name="open" value="open" />
+                <label for="open">ღიაა</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="branches-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11913.67920905815!2d44.74628448486328!3d41.71145930392991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473dd1e44bfab%3A0x72f294e6267a1a6d!2sAgroHub%20Vake!5e0!3m2!1sen!2sge!4v1729440633086!5m2!1sen!2sge"
+          width="100%"
+          height="180"
+          style="border: 0; border-radius: 10px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <section class="branches-cards">
+        <div class="card-grid">
+          <!-- <div class="card">
+            <div class="contact-information">
+              <div class="card-address">
+                <div>
+                  <h4>თბილისი</h4>
+                  <h4>+995 (32) 2 60 30 60</h4>
+                </div>
+                <p>წერეთელი</p>
+              </div>
+            </div>
+            <div class="card-working-hours"></div>
+          </div> -->
+          <div id="branch-2" class="sc-d746a503-0 gBxked">
+            <div class="sc-d746a503-1 gGSLgy">
+              <div class="sc-d746a503-2 eZHSiV">
+                <h4 class="sc-d746a503-3 jiVfib">თბილისი</h4>
+                <h4 class="sc-d746a503-4 doIAnE">+995 (32) 2 60 30 60</h4>
+              </div>
+              <p class="sc-d746a503-5 hYNQwv">წერეთელი</p>
+            </div>
+            <div class="sc-d746a503-6 jXbYRH">
+              <p class="sc-d746a503-7 rTuYg">ორშ-შაბ: 10:00:00 - 20:00:00</p>
+              <p class="sc-d746a503-7 rTuYg">კვირა: 10:00:00 - 19:00:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script type="module" src="/./src/js/branches.js"></script>
