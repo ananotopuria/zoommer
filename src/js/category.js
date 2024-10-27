@@ -2,7 +2,6 @@ import { displaySubcategories } from './subcategory.js';
 
 export function fetchCategories() {
     const categoryList = document.getElementById('categoryList');
-
     fetch('public/api/productCategory.json')
         .then(response => response.json())
         .then(data => {
@@ -13,7 +12,6 @@ export function fetchCategories() {
                 icon.classList.add('side__navigation-icon');
                 icon.src = category.iconUrl || 'default-icon.png'; 
                 icon.alt = category.name;
-
                 const title = document.createElement('span');
                 title.classList.add('side__navigation-title');
                 title.textContent = category.name;

@@ -497,12 +497,14 @@
 
 /* side navigation list */
 .side__navigation-nav {
-  width: 8rem;
+  width: 12rem;
   overflow-y: auto; 
+  padding-bottom: 10rem;
 }
 .navigation__tab-wrapper {
   max-height: 80vh; 
   overflow-y: auto;
+  padding-bottom: 10rem;
 }
 .side__navigation-list {
   display: flex;
@@ -539,6 +541,7 @@
 }
 .side__navigation-tabs {
   display: flex;
+  gap: 1rem;
   width: 100%;
 }
 .side__navigation-li:active,
@@ -553,13 +556,14 @@
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  overflow-x: hidden;
 
 }
 .navigation__card {
   border-radius: 1rem;
   background-color: #f2f2f2;
   width: 100%;
-  width: 15rem;
+  width: 20rem;
   height: 10rem;
   overflow: hidden;
   position: relative;
@@ -587,6 +591,15 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+.navigation__header-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 100vw;
+  
+}
+
 /* main */
 /* hero */
 .hero {
