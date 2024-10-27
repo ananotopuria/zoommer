@@ -11,20 +11,41 @@ import { loadDynamicNav } from "./src/js/categories.js";
 import { loadProducts } from './src/js/loadProducts.js';
 import { initProductSlider } from "./src/js/slider.js";
 import { fetchCategories } from './src/js/category.js';
+import { loadHeader } from './src/js/header.js';
+import { loadFooter } from './src/js/footer.js';
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadHeader();
+  loadFooter();
+});
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   fetch("/path/to/header.html")
+//     .then((response) => response.text())
+//     .then((html) => {
+//       document.querySelector("header").innerHTML = html;
+//     });
+// });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchCategories();
+    setupTabs();
+    
+    closeModalWindow("loginModal");
+    
+    openMenu();
+    closeMenu();
+    
+    makeSticky(".sub-header");
+    makeSticky(".navigation");
 });
 
-setupTabs();
+loadDynamicNav();
 
-closeModalWindow("loginModal");
+loadProducts();
 
-openMenu();
-closeMenu();
-
-makeSticky(".sub-header");
-makeSticky(".navigation");
 
 document.addEventListener("DOMContentLoaded", function() {
   initializeSearchModal();
@@ -42,19 +63,24 @@ window.addEventListener("DOMContentLoaded", () => {
   initSlider();
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   imgSlider();
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   scrollToTop();
+// });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   initProductSlider();
+//   initBrandSlider();
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   imgSlider();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
   scrollToTop();
-});
-
-loadDynamicNav();
-
-loadProducts();
-
-document.addEventListener('DOMContentLoaded', () => {
+  // loadDynamicNav();
+  // loadProducts();
   initProductSlider();
-  initBrandSlider();
+  // initBrandSlider();
 });
