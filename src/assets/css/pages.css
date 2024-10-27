@@ -2,6 +2,382 @@
 /* განვადება */
 /* კარიერა */
 /* trade in */
-/* ფილიალები */
-/* ყველა აქცია */
 
+/* ფილიალები */
+/* fonts */
+/* Regular სტილის ფონტის განსაზღვრა */
+/* Regular სტილის ფონტის განსაზღვრა */
+@font-face {
+    font-family: "FiraGO";
+    src: url("../fonts/FiraGO-Regular.woff2") format("woff2"),
+      url("../fonts/FiraGO-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Bold სტილის ფონტის განსაზღვრა */
+  @font-face {
+    font-family: "FiraGO";
+    src: url("../fonts/FiraGO-Bold.woff2") format("woff2"),
+      url("../fonts/FiraGO-Bold.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  section {
+    padding: 0px 15px;
+  }
+  .section-container {
+  
+  
+    margin-top: 30px;
+    margin-bottom: 60px;
+    /* padding: 0px 20px; */
+  }
+  /* filter-bar */
+  .filter-bar__flex {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 8px;
+    height: 70px;
+    margin-bottom: 30px;
+  }
+  .filter-bar__page-title {
+  
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .filter-bar__page-title h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: black;
+  }
+  .filter-bar__search-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  /* input */
+  .filter-bar__search-side-input {
+    position: relative;
+    width: 260px;
+    height: 50px;
+   
+  }
+  
+  .filter-bar__search-side-input input {
+    font-family: "Firago", sans-serif;
+    padding: 15px 20px 15px 58px;
+    outline: none;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #ec5e2a;
+    height: 100%;
+    width: 100%;
+  }
+  .filter-bar__search-side-input img {
+    position: absolute;
+    left: 22px;
+    top: 26%;
+  }
+  /* dropdown */
+  /* .filter-bar__search-side-dropdown {
+    position: relative;
+    width: 260px;
+    z-index: 9;
+  } */
+  .filter-bar__search-side-dropdown{
+    position: relative;
+    /* transition: 0.3s; */
+    width: 260px;
+    display: flex;
+      justify-content: center;
+  }
+  .selected-item {
+    /* min-width: 160px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f2f2f2;
+    border-radius: 12px;
+    padding: 16px;
+    /* border: none; */
+    cursor: pointer;
+    height: 50px;
+    width: 260px;
+    transition: width 0.1s ease, height 0.1s ease;
+  }
+  .selected-item h3 {
+    font-weight: 500;
+    line-height: 17px;
+    font-size: 14px;
+    color: #00000099;
+  }
+  .selected-item .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+  .selected-item .arrow-icon.rotate {
+    transform: rotate(180deg);
+  }
+  .dropdown-items-box{
+    pointer-events: auto;
+      width: 100%;
+      margin-top: -7px;
+      box-shadow: none;
+      border-radius: 12px;
+      overflow: hidden;
+      opacity: 0;
+      transform: none;
+      position: absolute;
+      top: 110%;
+      width: 100%;
+      /* box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px; */
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      z-index: 2;
+      max-height: 330px;
+      /* overflow-x: scroll; */
+      background: rgb(255, 255, 255) !important;
+      transition: opacity 0.5s ease;
+    transform: translateY(20px);
+  }
+  .dropdown-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    overflow-y: scroll;
+  }
+  /* 
+  .dropdown-items {
+    position: absolute;
+    list-style-type: none;
+  
+    width: 100%;
+  
+    border-radius: 12px;
+  
+    opacity: 0;
+    transform: none;
+    background: #f2f2f2;
+    overflow-y: scroll;
+    height: 330px;
+    transition: opacity 0.5s ease;
+    transform: translateY(20px);
+  } */
+  .visible {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .dropdown-items::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .dropdown-items::-webkit-scrollbar-thumb {
+    background-color: #ec5e2a7c; /* სკროლ ბარის ფერი */
+    border-radius: 5px;
+    z-index: -9;
+  }
+  .dropdown-items::-webkit-scrollbar-thumb:hover {
+    background-color: #ec5e2a; /* სკროლ ბარის ფერი */
+  }
+  
+  .dropdown-items::-webkit-scrollbar-track {
+    background: transparent; /* სკროლ ბარის ფონი */
+  }
+  
+  .dropdown-items::-webkit-scrollbar-button {
+    display: none; /* ისრების დამალვა */
+  }
+  .dropdown-item{
+    padding: 15px 20px;
+      font-weight: 500;
+      width: 100%;
+      font-size: 14px;
+      line-height: 17px;
+      color: #00000099;
+      cursor: pointer;
+      border-top: 2px solid white;
+  }
+  /* .dropdown-item {
+    padding: 15px 20px;
+    font-weight: 500;
+  
+    font-size: 14px;
+    line-height: 17px;
+    color: #00000099;
+    cursor: pointer;
+    border-top: 2px solid white;
+  } */
+  
+  .dropdown-item:hover {
+    color: black;
+  }
+  /* checkbox */
+  
+  /* დამალავს checkbox-ს */
+  .checkbox-img {
+    display: none;
+  }
+  
+  /* სტილი მონიშნული/არამონიშნული მდგომარეობისთვის */
+  .checkbox-div,
+  .checkbox-image {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+  }
+  
+  /* ცარიელი დივის სტილი */
+  .checkbox-div {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  /* სურათის სტილი */
+  .checkbox-image {
+    display: none; /* საწყისად დამალული */
+  }
+  
+  /* როდესაც checkbox მონიშნულია */
+  .checkbox-img:checked + label .checkbox-div {
+    display: none; /* დამალე ცარიელი დივი */
+  }
+  
+  .checkbox-img:checked + label .checkbox-image {
+    display: inline-block; /* აჩვენე სურათი */
+  }
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000cc;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  /* branches */
+  .branches__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
+    margin-top: 20px;
+  }
+  
+  .branches__grid--item {
+    border-radius: 8px;
+    background: #f2f2f2;
+    padding: 10px 20px;
+    width: 100%;
+    height: 110px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s;
+  }
+  .branches__grid--item:hover {
+    transform: scale(1.01);
+  }
+  
+  .branches__grid--item.active {
+    background-color: white;
+    border: 1px solid #ec5e2a;
+  }
+  .contact-info-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+  }
+  .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .contact-info--city {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000cc;
+  }
+  .contact-info--tel {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ec5e2a;
+  }
+  .contact-info--street {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000cc;
+    opacity: 0.8;
+  }
+  .working-hours {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: right;
+  }
+  .working-hours p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000cc;
+    opacity: 0.8;
+  }
+  
+  /* responsive */
+  .mobile {
+    display: none;
+    width: 100%;
+  }
+  .search-mobile {
+    margin-top: 20px;
+  }
+  @media (max-width: 1024px) {
+    .branches__grid {
+      grid-template-columns: 1fr;
+    }
+    .filter-bar__search-side-input {
+      display: none;
+    }
+  
+    .filter-bar__search-side-dropdown {
+      display: none;
+    }
+    .filter-bar__search-side-dropdown .selected-item {
+      width: 100%;
+    }
+    .mobile {
+      display: block;
+    }
+  
+    .dropdown-mobile {
+      display: block;
+      margin-bottom: 20px;
+    }
+    .filter-bar {
+      margin-top: 13px;
+    }
+    section {
+      padding: 0px 20px;
+    }
+    .dropdown-items-box{
+      margin-top: -5px;
+    }
+  }
+  
+  /* ყველა აქცია */
+  
