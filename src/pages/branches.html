@@ -2,94 +2,997 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://zoommer.ge/icons/favicon.ico" />
-    <link rel="stylesheet" href="./../assets/css/general.css" />
-    <link rel="stylesheet" href="./../assets/css/pages.css" />
-    <link rel="stylesheet" href="./../assets/css/style.css" />
-    <link rel="stylesheet" href="./../assets/css/queries.css" />
-    <title>ფილიალები Zoommer.ge</title>
+    <link
+      rel="icon"
+      href="https://zoommer.ge/icons/favicon.ico"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/general.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/queries.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/pages.css"
+    />
+    <title>Zoommer.ge</title>
   </head>
   <body>
-    <header></header>
-    <main class="container">
-      <section class="branches-filter-bar">
-        <div class="page-title"><h2>ფილიალები</h2></div>
-        <div class="filter-form-box">
-          <form action="#">
-            <div class="filter-form">
-              <div>
-                <img src="../images/search-orange.svg" />
-                <input
-                  type="search"
-                  id="search"
-                  name="search"
-                  placeholder="მოძებნე ფილიალი"
+    <header class="header">
+      <div class="sup-header">
+        <div class="container sup-header__container">
+          <div class="sup-header__contact">
+            <img
+              class="sup-header__phone-icon"
+              src="https://zoommer.ge/icons/header-phone.svg"
+              alt="Phone Icon"
+            />
+            <a
+              class="sup-header__phone-number"
+              href="#"
+              >*7007 / +995 (32) 2 60 30 60</a
+            >
+          </div>
+          <ul class="sup-header__menu">
+            <li class="sup-header__menu-item">
+              <a
+                class="sup-header__link"
+                href="./src/pages/trade-politics.html"
+                >სავაჭრო პოლიტიკა</a
+              >
+            </li>
+            <li class="sup-header__menu-item">
+              <a
+                class="sup-header__link"
+                href="./src/pages/instalment.html"
+                >განვადება</a
+              >
+            </li>
+            <li class="sup-header__menu-item">
+              <a
+                class="sup-header__link"
+                href="./src/pages/career.html"
+                >კარიერა</a
+              >
+            </li>
+            <li class="sup-header__menu-item">
+              <a
+                class="sup-header__link"
+                href="./src/pages/trade-in.html"
+                >Trade In</a
+              >
+            </li>
+            <li class="sup-header__menu-item">
+              <a
+                class="sup-header__link"
+                href="./src/pages/branches.html"
+                >ფილიალები</a
+              >
+            </li>
+            <li class="sup-header__menu-item">
+              <a
+                class="sup-header__link"
+                href="./src/pages/all-promotions.html"
+                >ყველა აქცია</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-header">
+        <div class="container">
+          <div class="sub-header__container">
+            <div class="wrapper">
+              <div class="logo">
+                <img
+                  class="logo__img"
+                  src="https://zoommer.ge/icons/main-logo.svg"
+                  alt="logo"
                 />
               </div>
-              <div>
-                <select>
-                  <option value="">ყველა ფილიალი</option>
-                  <option value="">თბილისი</option>
-                  <option value="">რუსთავი</option>
-                  <option value="">ბათუმი</option>
-                  <option value="">ქუთაისი</option>
-                  <option value="">ზუგდიდი</option>
-                  <option value="">თელავი</option>
-                  <option value="">ახალციხე</option>
-                  <option value="">გორი</option>
-                </select>
-              </div>
-              <div>
-                <input type="checkbox" id="open" name="open" value="open" />
-                <label for="open">ღიაა</label>
+              <div class="header__navigation">
+                <a
+                  class="header__nav-link"
+                  href="#"
+                >
+                  <img
+                    class="header__nav-img"
+                    src="https://zoommer.ge/icons/dots.svg"
+                    alt="Navigation Icon"
+                  />
+                  <span class="header__nav-text"> ნავიგაცია </span>
+                </a>
               </div>
             </div>
-          </form>
-        </div>
-      </section>
-      <section class="branches-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11913.67920905815!2d44.74628448486328!3d41.71145930392991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404473dd1e44bfab%3A0x72f294e6267a1a6d!2sAgroHub%20Vake!5e0!3m2!1sen!2sge!4v1729440633086!5m2!1sen!2sge"
-          width="100%"
-          height="180"
-          style="border: 0; border-radius: 10px"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section>
-      <section class="branches-cards">
-        <div class="card-grid">
-          <!-- <div class="card">
-            <div class="contact-information">
-              <div class="card-address">
-                <div>
-                  <h4>თბილისი</h4>
-                  <h4>+995 (32) 2 60 30 60</h4>
+            <div class="header-search">
+              <div class="header-search__search">
+                <a
+                  class="header-search__search-icon-link"
+                  href="#"
+                  id="searchButton"
+                >
+                  <img
+                    class="header-search__icon"
+                    src="https://zoommer.ge/icons/main-search.svg"
+                    alt="Search Icon"
+                  />
+                </a>
+                <input
+                  class="header-search__input"
+                  type="text"
+                  name="q"
+                  placeholder="ძიება"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+            <div
+              id="popularSearchesModal"
+              class="search-modal"
+            >
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>პოპულარული სერჩები:</h2>
+                <ul class="search__item">
+                  <li class="search__item-list">iPhone 15</li>
+                  <li class="search__item-list">iPhone 15 Pro</li>
+                  <li class="search__item-list">Galaxy S24</li>
+                  <li class="search__item-list">iPhone 11</li>
+                  <li class="search__item-list">iPhone 12</li>
+                  <li class="search__item-list">iPhone 14</li>
+                  <li class="search__item-list">iPhone 13</li>
+                  <li class="search__item-list">Laptops</li>
+                  <li class="search__item-list">PS5</li>
+                  <li class="search__item-list">JBL</li>
+                  <li class="search__item-list">MacBook</li>
+                  <li class="search__item-list">Pixel</li>
+                  <li class="search__item-list">Polaroid</li>
+                  <li class="search__item-list">iPad</li>
+                  <li class="search__item-list">Dyson Hair Dryer</li>
+                  <li class="search__item-list">Xiaomi 14</li>
+                  <li class="search__item-list">Redmi Note 12</li>
+                  <li class="search__item-list">Galaxy S23</li>
+                  <li class="search__item-list">AirPods</li>
+                  <li class="search__item-list">TV</li>
+                  <li class="search__item-list">Smart Band 8</li>
+                  <li class="search__item-list">Treadmill</li>
+                  <li class="search__item-list">Macbook M3</li>
+                  <li class="search__item-list">Apple Watch Ultra 2</li>
+                  <li class="search__item-list">Dyson Airwrap</li>
+                  <li class="search__item-list">PS5 Controller</li>
+                  <li class="search__item-list">Marshall</li>
+                  <li class="search__item-list">Xbox</li>
+                  <li class="search__item-list">DJI</li>
+                  <li class="search__item-list">Dyson Vacuum Cleaner</li>
+                  <li class="search__item-list">Power Bank</li>
+                  <li class="search__item-list">Segway</li>
+                </ul>
+              </div>
+            </div>
+            <button class="header__user header__user--cart">
+              <img
+                class="header__icon"
+                src="https://zoommer.ge/icons/header-cart.svg"
+                alt="Cart Icon"
+              />
+              <p class="header__text">კალათა</p>
+            </button>
+            <button class="header__user header__user--login">
+              <img
+                class="header__icon"
+                src="https://zoommer.ge/icons/user-icon.svg"
+                alt="User Icon"
+              />
+              <p class="header__text">შესვლა</p>
+            </button>
+            <div
+              id="cartModal"
+              class="modal hidden"
+            >
+              <div class="modal__container">
+                <h5>კალათა</h5>
+                <p>0 პროდუქტი</p>
+              </div>
+              <img
+                class="modal__img"
+                src="https://zoommer.ge/icons/emptybag.svg"
+                alt="shop cart img"
+              />
+              <div class="modal__container">
+                <p>ჯამური ფასი: 0 ₾</p>
+                <button class="cart-btn">კალათის გახსნა</button>
+              </div>
+            </div>
+            <div
+              id="loginModal"
+              class="modal hidden"
+            >
+              <img
+                class="close-btn"
+                src="https://zoommer.ge/icons/mobile-modal-close.svg"
+                alt="close-btn"
+              />
+              <div class="login__tab-container">
+                <button
+                  class="btn login__tab login__tab--1 login__tab--active"
+                  data-tab="1"
+                >
+                  ავტორიზაცია
+                </button>
+                <button
+                  class="btn login__tab login__tab--2"
+                  data-tab="2"
+                >
+                  რეგისტრაცია
+                </button>
+              </div>
+              <div
+                class="login__content login__content--1 login__content--active"
+                data-tab="1"
+              >
+                <div class="modal__btns">
+                  <button class="modal__btns-btn1">ნომრით ავტორიზაცია</button>
+                  <button class="modal__btns-btn2">მეილით ავტორიზაცია</button>
                 </div>
-                <p>წერეთელი</p>
+                <form class="modal__form">
+                  <input
+                    class="modal-input input-field"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="ელფოსტა"
+                  />
+                  <input
+                    class="modal-input input-field"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="პაროლი"
+                  />
+
+                  <button
+                    type="submit"
+                    class="submit-btn"
+                  >
+                    შესვლა
+                  </button>
+                </form>
+              </div>
+              <div
+                class="login__content login__content--2 login__content"
+                data-tab="2"
+              >
+                <form class="modal__form">
+                  <button
+                    type="submit"
+                    class="submit-btn"
+                  >
+                    რეგისტრაცია
+                  </button>
+                </form>
               </div>
             </div>
-            <div class="card-working-hours"></div>
-          </div> -->
-          <div id="branch-2" class="sc-d746a503-0 gBxked">
-            <div class="sc-d746a503-1 gGSLgy">
-              <div class="sc-d746a503-2 eZHSiV">
-                <h4 class="sc-d746a503-3 jiVfib">თბილისი</h4>
-                <h4 class="sc-d746a503-4 doIAnE">+995 (32) 2 60 30 60</h4>
-              </div>
-              <p class="sc-d746a503-5 hYNQwv">წერეთელი</p>
-            </div>
-            <div class="sc-d746a503-6 jXbYRH">
-              <p class="sc-d746a503-7 rTuYg">ორშ-შაბ: 10:00:00 - 20:00:00</p>
-              <p class="sc-d746a503-7 rTuYg">კვირა: 10:00:00 - 19:00:00</p>
+            <div class="flag__container">
+              <img
+                class="flag"
+                src="https://zoommer.ge/icons/footer/flag-geo.png"
+                alt="flag"
+              />
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer></footer>
-    <script type="module" src="/./src/js/branches.js"></script>
+      </div>
+      <div class="navigation none">
+        <div class="navigation__wrapper">
+          <div class="navigation__container">
+            <img
+              class="burger-btn"
+              src="https://zoommer.ge/icons/burger-icon.svg"
+              alt="logo"
+            />
+            <img
+              class="logo__img-1"
+              src="https://zoommer.ge/icons/main-logo.svg"
+              alt="logo"
+            />
+          </div>
+          <div class="navigation__container">
+            <img
+              src="	https://zoommer.ge/icons/search.svg"
+              alt="search-logo"
+            />
+            <img
+              src="	https://zoommer.ge/icons/cart.svg
+            "
+              alt="cart-logo"
+            />
+            <img
+              class="flag"
+              src="https://zoommer.ge/icons/footer/flag-geo.png"
+              alt="flag"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="side__navigation">
+        <div class="side__menu hidden">
+          <div class="side__navigation-header">
+            <button class="side__menu-close">
+              <img
+                src="https://zoommer.ge/icons/burger-close.svg"
+                alt="close btn"
+              />
+            </button>
+            <div class="navigation__header-search">
+              <div class="header-search__search">
+                <a
+                  class="header-search__search-icon-link"
+                  href="#"
+                >
+                  <img
+                    class="header-search__icon"
+                    src="https://zoommer.ge/icons/main-search.svg"
+                    alt="Search Icon"
+                  />
+                </a>
+                <input
+                  class="header-search__input"
+                  type="text"
+                  name="q"
+                  placeholder="ძიება"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="side__navigation-tabs">
+            <!-- side navigation -->
+            <nav class="side__navigation-nav">
+              <ul
+                id="categoryList"
+                class="side__navigation-list"
+              ></ul>
+            </nav>
+            <div
+              id="subcategoryWrapper"
+              class="navigation__tab-wrapper"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="sub__navigation hidden">
+      <nav class="sub__navigation-nav">
+        <ul class="sub__navigation-list">
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon icon-1"
+              name="home-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title title-1">მთავარი</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon"
+              name="apps-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">კატეგორიები</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon icon-3"
+              name="flash-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">აქციები</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon"
+              name="repeat-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">შედარება</span>
+          </li>
+          <li class="sub__navigation-li">
+            <ion-icon
+              class="sub__navigation-icon"
+              name="person-outline"
+            ></ion-icon
+            ><span class="sub__navigation-title">შესვლა</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <main class="main">
+        <div class="section-container">
+          <section class="filter-bar">
+            <div class="filter-bar__flex">
+              <div class="filter-bar__page-title">
+                <h2>ფილიალები</h2>
+              </div>
+              <div class="filter-bar__search-side">
+                <div class="filter-bar__search-side-input">
+                  <img
+                    src="../images/search-orange.svg"
+                    alt="search icon"
+                  />
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="მოძებნე ფილიალი"
+                  />
+                </div>
+                <div class="filter-bar__search-side-dropdown">
+                  <div
+                    class="selected-item"
+                    id="selected-item"
+                  >
+                    <h3>აირჩიეთ ქალაქი</h3>
+                    <div
+                      class="arrow-icon"
+                      id="arrow-icon"
+                    >
+                      <img
+                        src="../images/selector-down-arr.svg"
+                        alt="arrow icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="dropdown-items-box">
+                    <ul
+                    class="dropdown-items"
+                    id="dropdown-items"
+                  >
+                    <li class="dropdown-item">ყველა ფილიალი</li>
+                    <li class="dropdown-item">თბილისი</li>
+                    <li class="dropdown-item">რუსთავი</li>
+                    <li class="dropdown-item">ბათუმი</li>
+                    <li class="dropdown-item">ქუთაისი</li>
+                    <li class="dropdown-item">ზუგდიდი</li>
+                    <li class="dropdown-item">თელავი</li>
+                    <li class="dropdown-item">ახალციხე</li>
+                    <li class="dropdown-item">გორი</li>
+                    <li class="dropdown-item">თბილისი</li>
+                    <li class="dropdown-item">რუსთავი</li>
+                    <li class="dropdown-item">ბათუმი</li>
+                    <li class="dropdown-item">ქუთაისი</li>
+                    <li class="dropdown-item">ზუგდიდი</li>
+                    <li class="dropdown-item">თელავი</li>
+                    <li class="dropdown-item">ახალციხე</li>
+                    <li class="dropdown-item">გორი</li>
+                  </ul>
+                  </div>
+                 
+                </div>
+                <div class="filter-bar__search-side-checkbox">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    class="checkbox-img"
+                  />
+                  <label
+                    for="checkbox"
+                    class="checkbox-label"
+                  >
+                    <div class="checkbox-div"></div>
+                    <img
+                      src="../images/filter-checkbox-active.svg"
+                      alt="checkbox icon"
+                      class="checkbox-image"
+                    />
+                    <span>ღიაა</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-mobile">
+              <div class="filter-bar__search-side-dropdown mobile">
+                <div
+                  class="selected-item"
+                  id="selected-item"
+                >
+                  <h3>აირჩიეთ ქალაქი</h3>
+                  <div
+                    class="arrow-icon"
+                    id="arrow-icon"
+                  >
+                    <img
+                      src="../images/selector-down-arr.svg"
+                      alt="arrow icon"
+                    />
+                  </div>
+                </div>
+                <div class="dropdown-items-box">
+                <ul
+                  class="dropdown-items"
+                  id="dropdown-items"
+                >
+                  <li class="dropdown-item">ყველა ფილიალი</li>
+                  <li class="dropdown-item">თბილისი</li>
+                  <li class="dropdown-item">რუსთავი</li>
+                  <li class="dropdown-item">ბათუმი</li>
+                  <li class="dropdown-item">ქუთაისი</li>
+                  <li class="dropdown-item">ზუგდიდი</li>
+                  <li class="dropdown-item">თელავი</li>
+                  <li class="dropdown-item">ახალციხე</li>
+                  <li class="dropdown-item">გორი</li>
+                  <li class="dropdown-item">თბილისი</li>
+                  <li class="dropdown-item">რუსთავი</li>
+                  <li class="dropdown-item">ბათუმი</li>
+                  <li class="dropdown-item">ქუთაისი</li>
+                  <li class="dropdown-item">ზუგდიდი</li>
+                  <li class="dropdown-item">თელავი</li>
+                  <li class="dropdown-item">ახალციხე</li>
+                  <li class="dropdown-item">გორი</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47446.791081733485!2d44.11125025!3d41.99116565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40449ea66b463135%3A0x1dc6daa3a8328ebc!2z4YOh4YOi4YOQ4YOa4YOY4YOc4YOY4YOhIOGDm-GDo-GDluGDlOGDo-GDm-GDmA!5e0!3m2!1ska!2sge!4v1729901237110!5m2!1ska!2sge"
+              width="100%"
+              height="180"
+              style="border: 0; border-radius: 15px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </section>
+          <section class="search-mobile">
+            <div class="filter-bar__search-side-input mobile">
+              <img
+                src="../images/search-orange.svg"
+                alt="search icon"
+              />
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="მოძებნე ფილიალი"
+              />
+            </div>
+          </section>
+          <section class="branches">
+            <div class="branches__grid">
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+              <div class="branches__grid--item">
+                <div class="contact-info-box">
+                  <div class="contact-info">
+                    <h4 class="contact-info--city">თბილისი</h4>
+                    <h4 class="contact-info--tel">+995 (32) 2 60 30 60</h4>
+                  </div>
+                  <p class="contact-info--street">წერეთელი</p>
+                </div>
+                <div class="working-hours">
+                  <p>ორშ-შაბ: 10:00:00 - 20:00:00</p>
+                  <p>კვირა: 10:00:00 - 19:00:00</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer__nav">
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">ნავიგაცია</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >პერსონალურ მონაცემთა დაცვის პოლიტიკა</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >ჩვენ შესახებ</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >წესები დაპირობები</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >მიწოდების სერვისი</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >კარიერა</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">გადახდები</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >გადახდის მეთოდები</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >გარანტია</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >განვადება</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >ნივთის დაბრუნება</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  >ნივთის ონლაინ ყიდვის ინსტრუქცია</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">გამოგვყევი</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/fb.svg"
+                    alt="icon"
+                  /><span>Facebook</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/youtube.svg"
+                    alt="icon"
+                  /><span>Youtube</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/instagram.svg"
+                    alt="icon"
+                  /><span>Instagram</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="	https://zoommer.ge/icons/footer/tiktok.svg
+                  "
+                    alt="icon"
+                  /><span>Tik Tok</span></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav-list">
+            <h5 class="footer__nav-title">კონტაქტი</h5>
+            <ul class="footer__nav-content">
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/gmail.svg
+
+                  "
+                    alt="icon"
+                  /><span>Info@zoommer.ge</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/phone.svg
+
+                  "
+                    alt="icon"
+                  /><span>+995 (32) 2 60 30 60</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/locations.svg
+
+                  "
+                    alt="icon"
+                  /><span>ფილიალები</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__nav-link"
+                  href="#"
+                  ><img
+                    src="https://zoommer.ge/icons/footer/locations.svg
+
+                  "
+                    alt="icon"
+                  /><span>კორპორატიული გაყიდვები</span></a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="footer__apps">
+          <p>Zoommer App</p>
+          <img
+            src="https://zoommer.ge/images/e-360.svg
+          "
+            alt="eccomerce360 logo"
+          />
+        </div>
+      </div>
+      <div class="line"></div>
+      <p class="rights">Copyright © 2023 Zoommer.ge. All rights reserved.</p>
+      <img
+        id="scrollToTopBtn"
+        class="scroll-to-top"
+        src="https://zoommer.ge/icons/arrow-up-web.svg"
+        alt="icon"
+      />
+      <img
+        class="compare"
+        src="https://zoommer.ge/icons/quick-btn-compare.svg"
+        alt="icon"
+      />
+      <button class="chatbot">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+      </button>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
+  <script
+    type="module"
+    src="../../main.js"
+  ></script>
+  <script
+    type="module"
+    src="../js/loadProducts.js"
+  ></script>
+  <script src="../js/branches.js"></script>
 </html>
